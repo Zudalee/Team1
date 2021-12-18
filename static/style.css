@@ -1,0 +1,199 @@
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size:20px;
+}
+.title{
+    width: 100%;
+    height: 300px;
+    /*border: 2px solid #09c;*/
+    background-image: url('https://ak-d.tripcdn.com/images/100c1g000001h3hlq7989.jpg');
+    background-position: 0 63%;
+    background-size: cover;
+    text-align: center;
+}
+.title-div{
+    position:absolute;
+    margin:70px 330px;
+}
+.title-text{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 65px;
+}
+
+/** {box-sizing: border-box;}*/
+/*body{margin: 0;}*/
+.search {
+    display: table;
+    background: #7B99CA;
+    width:100%;
+    height: 230px;
+    padding: 30px 0;
+}
+.a1{
+    margin-left:300px;
+}
+.select-city {
+    margin-top: 42px;
+    height: 42px;
+    width: 200px;
+    background: #A3D0C3;
+    margin-left: 20px;
+    border: none;
+    text-align: center;
+}
+.a2{
+    margin-left:180px;
+}
+.searchbox {
+    display:inline-block;
+    position: relative;
+    width: 500px;
+    margin-left: 20px;
+    float: bottom;
+    background: #A3D0C3;
+}
+.search-input{
+    height: 42px;
+    width:100%;
+    padding-left: 15px;
+}
+.search-input, .search-button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.search-button {
+    height: 42px;
+    width: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.search-button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #F9F0DA;
+}
+.favorite-main{
+    display:flex;
+    height:300px;
+    width:100%;
+    background-image: linear-gradient( rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4) ), url("http://cfile27.uf.tistory.com/image/2620853B520B205C1AFA37");
+    background-position: 0 80%;
+    background-size: cover;
+    text-align: center;
+}
+.favorite-div{
+    height:45px;
+    width:300px;
+    position:absolute;
+    background-color:#5B6DCD;
+    margin:10px 75px;
+    border-radius: 20px;
+}
+.favorite-text{
+    font-size: 30px;
+}
+.favorite-card1{
+    flex:1;
+    margin:85px 30px;
+    height:200px;
+    width:200px;
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/62/0a/35/photo0jpg.jpg?w=500&h=400&s=1');
+    background-position: center;
+    background-size:cover;
+    background-color:cyan;
+    text-align:center;
+    vertical-align:middle;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.favorite-card-title1{
+    margin:5px auto;
+    width:150px;
+    background-color:white;
+    border:1px solid black;
+    border-radius:10px;
+}
+.favorite-card2{
+    flex:1;
+    margin:85px 30px;
+    height:200px;
+    width:200px;
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/0f/b4/28/village-view.jpg?w=500&h=400&s=1');
+    background-color:cyan;
+    background-size:cover;
+    text-align:center;
+    vertical-align:middle;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.favorite-card-title2{
+    margin:5px auto;
+    width:150px;
+    background-color:white;
+    border:1px solid black;
+    border-radius:10px;
+}
+.favorite-card3{
+    flex:1;
+    margin:85px 30px;
+    height:200px;
+    width:200px;
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/a5/6c/78/caption.jpg?w=500&h=-1&s=1');
+    background-color:cyan;
+    background-size:cover;
+    text-align:center;
+    vertical-align:middle;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.favorite-card-title3{
+    margin:5px auto;
+    width:150px;
+    background-color:white;
+    border:1px solid black;
+    border-radius:10px;
+}
+.favorite-card4{
+    flex:1;
+    margin:85px 30px;
+    height:200px;
+    width:200px;
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/69/1d/6c/caption.jpg?w=1000&h=-1&s=1');
+    background-color:cyan;
+    background-size:cover;
+    text-align:center;
+    vertical-align:middle;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.favorite-card-title4{
+    margin:5px auto;
+    width:150px;
+    background-color:white;
+    border:1px solid black;
+    border-radius:10px;
+}
+.favorite-card5{
+    flex:1;
+    margin:85px 30px;
+    height:200px;
+    width:200px;
+    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/d4/52/48/songdo-central-park.jpg?w=1200&h=-1&s=1');
+    background-color:cyan;
+    background-size:cover;
+    text-align:center;
+    vertical-align:middle;
+    border:2px solid black;
+    border-radius: 20px;
+}
+.favorite-card-title5{
+    margin:5px auto;
+    width:150px;
+    background-color:white;
+    border:1px solid black;
+    border-radius:10px;
+}
