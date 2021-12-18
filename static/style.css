@@ -95,6 +95,7 @@
 }
 .favorite-text{
     font-size: 30px;
+    text-align: center;
 }
 .favorite-card1{
     flex:1;
