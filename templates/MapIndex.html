@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Kakao 지도 시작하기</title>
+    <script type="text/javascript" src="../MapData.json" id="mapdata"></script>
+</head>
+<body>
+	<div id="map" style="width:500px;height:400px;"></div>
+	<script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=6785b28cb2a4a39e8e7959c7055d3708&libraries=services,clusterer,drawing"></script>
+	<script>
+        {#var jsonData = mapdat.parse(mapdata.stringify(Params))#}
+
+
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        var positions = [
+            {
+                latlng: new kakao.maps.LatLng(33.450705, 126.570677)
+
+            },
+            {
+                latlng: new kakao.maps.LatLng(33.450936, 126.569477)
+
+            },
+            {
+                latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+
+            },
+            {
+                latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+
+            },
+        ];
+
+        for (var i = 0; i < positions.length; i ++) {
+            var mark = new kakao.maps.Marker({
+                map: map, // 마커를 표시할 지도
+                position: positions[i].latlng // 마커의 위치
+            });
+        }
+
+
+
+
+	</script>
+</body>
+</html>
