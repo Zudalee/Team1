@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>오늘 어디가지?</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+  
+    <link rel="stylesheet" href="/css/style.css?after">
+  
+  </head>
+  
+  <body>
+    <div class="wrap">
+      <!-- S:header -->
+      <header>
+        <div class="title">
+          <h1>오늘 어디가지?</h1>
+        </div>
+        <div class="search">
+          <span class="a1">지역 선택</span>
+          <select name="city" class="select-city">
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+          </select>
+  
+          <fieldset>
+            <legend class="blind">통합검색</legend>
+            <label for="search-text" class="blind">검색어</label>
+            <form class="search-box">
+              <input class="search-input" type="text" placeholder="#검색어를 입력하세요.">
+              <button class="search-button" type="submit"></button>
+            </form>
+        </fieldset>
+        </div>
+      </header>
+      <!-- E:header -->
+  
+      <!-- S:main -->
+      <main>
+        <div class="main-top">
+          <div class="keyword">
+            <h1 class="site">&#35;관광 지역</h1>
+            <hr>
+            <h2>&#35;코스-관광지명</h2>
+          </div>
+        </div>
+        <div class="main_card">
+          <ul class="card">
+            <li class="image">
+              <img src="https://wishbeen-seoul.s3.ap-northeast-2.amazonaws.com/plan/1460453012183_GreeceOia.jpg"
+                alt="관광지 사진">
+            </li>
+            <li>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202735.97104559606!2d126.58392139089554!3d37.44302093334272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca1598c361b2b%3A0xdbf9af292beff3c!2z6rCV64Ko!5e0!3m2!1sko!2skr!4v1639983197662!5m2!1sko!2skr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </li>
+          </ul>
+          <table class="table">
+            <caption class="blind">해당 관광지 상세정보</caption>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col>
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>코스명</th>
+                <td>코스명</td>
+                <th>관광지명</th>
+                <td>관광지명</td>
+              </tr>
+              <tr>
+                <th>강수확률</th>
+                <td>강수확률</td>
+                <th>강수량</th>
+                <td>강수량</td>
+              </tr>
+              <tr>
+                <th>테마</th>
+                <td>테마</td>
+                <th>하늘상태</th>
+                <td>하늘상태</td>
+              </tr>
+              <tr>
+                <th>일 3시간 기온</th>
+                <td>일 3시간 기온</td>
+                <th>식중독 지수</th>
+                <td>식중독 지수</td>
+              </tr>
+              <tr>
+                <th>풍향</th>
+                <td>풍향</td>
+                <th>체감온도</th>
+                <td>체감온도</td>
+              </tr>
+              <tr>
+                <th>불쾌지수</th>
+                <td>불쾌지수</td>
+                <th>자외선지수</th>
+                <td>자외선지수</td>
+              </tr>
+              <tr>
+                <th>습도</th>
+                <td>습도</td>
+                <th>열지수</th>
+                <td>열지수</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <!-- E:main -->
+  
+      <!-- S:footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <h3 class="footer-title">기분최고조</h3>
+          <h4>SPRTA CODING CLUB</h4>
+          <p>이희주 - 배수빈 - 박정인 - 박상현 - 한수지 - 채하원 - 김호성</p>
+        </div>
+      </footer>
+      <!-- E:footer -->
+    </div>
+  </body>
+  
+  </html>
