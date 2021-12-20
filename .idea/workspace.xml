@@ -2,15 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2848c0f-1eb9-4de3-8968-cab4f2ab4752" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jungin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data_go/api_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/travel.iml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KakaoTalk_20211216_212404621.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/KakaoTalk_20211218_210234146.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_go/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +64,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.api_data">
+  <component name="RunManager" selected="Flask server.Flask (app.py)">
     <configuration name="02_data_test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="jungin" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -199,9 +200,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.api_data" />
         <item itemvalue="Python.02_data_test" />
-        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.ddd" />
         <item itemvalue="Python.data_sample" />
       </list>
@@ -217,17 +218,30 @@
       <updated>1639841976629</updated>
       <workItem from="1639841983097" duration="813000" />
       <workItem from="1639887214116" duration="26380000" />
-      <workItem from="1639920281253" duration="13223000" />
+      <workItem from="1639920281253" duration="13764000" />
+      <workItem from="1640012053087" duration="337000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/jungin$data.coverage" NAME="data Coverage Results" MODIFIED="1639889546204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jungin$api_data.coverage" NAME="api_data Coverage Results" MODIFIED="1640000389309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_go" />
-    <SUITE FILE_PATH="coverage/jungin$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1639914166624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/jungin$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1640011998655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/jungin$api.coverage" NAME="api Coverage Results" MODIFIED="1639889835302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jungin$data_sam.coverage" NAME="data_sam Coverage Results" MODIFIED="1639888345762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/jungin$ddd.coverage" NAME="ddd Coverage Results" MODIFIED="1639903692675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/templates" />

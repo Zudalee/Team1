@@ -10,8 +10,6 @@ jsonobj = json.loads(jsonString)
 
 for item in jsonobj['items']['item']:
 
-
-
     print(item)
 
 
