@@ -128,118 +128,264 @@
     margin-left:50px;
     font-size: 25px;
 }
-.favorite-card1{
-    flex-basis:400px;
-    flex-grow:0;
-    flex-shrink:0;
+.favorite-card1 {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 250px;
+    margin: 20px 30px;
+}
+.favorite-card1-top{
     height:200px;
-    margin:20px 30px;
-
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/62/0a/35/photo0jpg.jpg?w=500&h=400&s=1');
     background-position: center;
     background-size:cover;
     background-color:cyan;
     text-align:center;
     vertical-align:middle;
-    border:2px solid black;
-    border-radius: 20px;
+    border:1px solid black;
+    border-radius: 20px 20px 0 0;
 }
-.favorite-card-title1{
+.favorite-card1-bottom {
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+    border:1px solid black;
+    text-align: left;
+}
+.favorite-card1-comment{
+    padding:0 10px;
+}
+.favorite-card1-title{
     margin:5px auto;
     width:150px;
     background-color:white;
     border:1px solid black;
     border-radius:10px;
 }
-.favorite-card2{
-    flex-basis:400px;
-    flex-grow:0;
-    flex-shrink:0;
+.favorite-card2 {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 250px;
+    margin: 20px 30px;
+}
+.favorite-card2-top{
     height:200px;
-    margin:20px 30px;
-
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/0f/b4/28/village-view.jpg?w=500&h=400&s=1');
-    background-color:cyan;
+    background-position: center;
     background-size:cover;
+    background-color:cyan;
     text-align:center;
     vertical-align:middle;
-    border:2px solid black;
-    border-radius: 20px;
+    border:1px solid black;
+    border-radius: 20px 20px 0 0;
 }
-.favorite-card-title2{
+.favorite-card2-bottom {
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+    border:1px solid black;
+    text-align: left;
+}
+.favorite-card2-comment{
+    padding:0 10px;
+}
+.favorite-card2-title{
     margin:5px auto;
     width:150px;
     background-color:white;
     border:1px solid black;
     border-radius:10px;
 }
-.favorite-card3{
-    flex-basis:400px;
-    flex-grow:0;
-    flex-shrink:0;
+.favorite-card3 {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 250px;
+    margin: 20px 30px;
+}
+.favorite-card3-top{
     height:200px;
-    margin:20px 30px;
-
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/a5/6c/78/caption.jpg?w=500&h=-1&s=1');
-    background-color:cyan;
+    background-position: center;
     background-size:cover;
+    background-color:cyan;
     text-align:center;
     vertical-align:middle;
-    border:2px solid black;
-    border-radius: 20px;
+    border:1px solid black;
+    border-radius: 20px 20px 0 0;
 }
-.favorite-card-title3{
+.favorite-card3-bottom {
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+    border:1px solid black;
+    text-align: left;
+}
+.favorite-card3-comment{
+    padding:0 10px;
+}
+.favorite-card3-title{
     margin:5px auto;
     width:150px;
     background-color:white;
     border:1px solid black;
     border-radius:10px;
 }
-.favorite-card4{
-    flex-basis:400px;
-    flex-grow:0;
-    flex-shrink:0;
+.favorite-card4 {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 250px;
+    margin: 20px 30px;
+}
+.favorite-card4-top{
     height:200px;
-    margin:20px 30px;
-
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/69/1d/6c/caption.jpg?w=1000&h=-1&s=1');
-    background-color:cyan;
+    background-position: center;
     background-size:cover;
+    background-color:cyan;
     text-align:center;
     vertical-align:middle;
-    border:2px solid black;
-    border-radius: 20px;
+    border:1px solid black;
+    border-radius: 20px 20px 0 0;
 }
-.favorite-card-title4{
+.favorite-card4-bottom {
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+    border:1px solid black;
+    text-align: left;
+}
+.favorite-card4-comment{
+    padding:0 10px;
+}
+.favorite-card4-title{
     margin:5px auto;
     width:150px;
     background-color:white;
     border:1px solid black;
     border-radius:10px;
 }
-.favorite-card5{
-    flex:1;
-    flex-basis:400px;
-    flex-grow:0;
-    flex-shrink:0;
+.favorite-card5 {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    height: 250px;
+    margin: 20px 30px;
+}
+.favorite-card5-top{
     height:200px;
-    margin:85px 30px;
-
     background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/d4/52/48/songdo-central-park.jpg?w=1200&h=-1&s=1');
-    background-color:cyan;
+    background-position: center;
     background-size:cover;
+    background-color:cyan;
     text-align:center;
     vertical-align:middle;
-    border:2px solid black;
-    border-radius: 20px;
+    border:1px solid black;
+    border-radius: 20px 20px 0 0;
 }
-.favorite-card-title5{
+.favorite-card5-bottom {
+    height: 50px;
+    border-radius: 0 0 20px 20px;
+    border:1px solid black;
+    text-align: left;
+}
+.favorite-card5-comment{
+    padding:0 10px;
+}
+.favorite-card5-title{
     margin:5px auto;
     width:150px;
     background-color:white;
     border:1px solid black;
     border-radius:10px;
 }
+
+
+/*.favorite-card2{*/
+/*    flex-basis:400px;*/
+/*    flex-grow:0;*/
+/*    flex-shrink:0;*/
+/*    height:200px;*/
+/*    margin:20px 30px;*/
+
+/*    background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/0f/b4/28/village-view.jpg?w=500&h=400&s=1');*/
+/*    background-color:cyan;*/
+/*    background-size:cover;*/
+/*    text-align:center;*/
+/*    vertical-align:middle;*/
+/*    border:2px solid black;*/
+/*    border-radius: 20px 20px 0 0;*/
+/*}*/
+/*.favorite-card-title2{*/
+/*    margin:5px auto;*/
+/*    width:150px;*/
+/*    background-color:white;*/
+/*    border:1px solid black;*/
+/*    border-radius:10px;*/
+/*}*/
+/*.favorite-card3{*/
+/*    flex-basis:400px;*/
+/*    flex-grow:0;*/
+/*    flex-shrink:0;*/
+/*    height:200px;*/
+/*    margin:20px 30px;*/
+
+/*    background-color:cyan;*/
+/*    background-size:cover;*/
+/*    text-align:center;*/
+/*    vertical-align:middle;*/
+/*    border:2px solid black;*/
+/*    border-radius: 20px 20px 0 0;*/
+/*}*/
+/*.favorite-card-title3{*/
+/*    margin:5px auto;*/
+/*    width:150px;*/
+/*    background-color:white;*/
+/*    border:1px solid black;*/
+/*    border-radius:10px;*/
+/*}*/
+/*.favorite-card4{*/
+/*    flex-basis:400px;*/
+/*    flex-grow:0;*/
+/*    flex-shrink:0;*/
+/*    height:200px;*/
+/*    margin:20px 30px;*/
+
+/*    background-color:cyan;*/
+/*    background-size:cover;*/
+/*    text-align:center;*/
+/*    vertical-align:middle;*/
+/*    border:2px solid black;*/
+/*    border-radius: 20px 20px 0 0;*/
+/*}*/
+/*.favorite-card-title4{*/
+/*    margin:5px auto;*/
+/*    width:150px;*/
+/*    background-color:white;*/
+/*    border:1px solid black;*/
+/*    border-radius:10px;*/
+/*}*/
+/*.favorite-card5{*/
+/*    flex:1;*/
+/*    flex-basis:400px;*/
+/*    flex-grow:0;*/
+/*    flex-shrink:0;*/
+/*    height:200px;*/
+/*    margin:85px 30px;*/
+
+/*    background-color:cyan;*/
+/*    background-size:cover;*/
+/*    text-align:center;*/
+/*    vertical-align:middle;*/
+/*    border:2px solid black;*/
+/*    border-radius: 20px 20px 0 0;*/
+/*}*/
+/*.favorite-card-title5{*/
+/*    margin:5px auto;*/
+/*    width:150px;*/
+/*    background-color:white;*/
+/*    border:1px solid black;*/
+/*    border-radius:10px;*/
+/*}*/
 /*여기부터 슬라이드*/
 * {box-sizing:border-box}
 
