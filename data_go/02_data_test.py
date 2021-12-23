@@ -1,19 +1,13 @@
-import requests
-from urllib import parse
+import requests, xmltodict, json
 
-url = "http://apis.data.go.kr/1360000/TourStnInfoService/getTourStnWthrIdx"
-api_key_utf8 = "gUumAEbmHnjp9J33lIoCsYEhgwBdCiXmhoz%2BM27dYl6D1iVm9SKQfqmxXA3E7U0TtQ0QnqCj1MYikJfNwzwopQ%3D%3D"
-api_key_decode = parse.unquote(api_key_utf8)
+url = "http://apis.data.go.kr/1360000/TourStnInfoService/getTourStnVilageFcst?serviceKey=gUumAEbmHnjp9J33lIoCsYEhgwBdCiXmhoz%2BM27dYl6D1iVm9SKQfqmxXA3E7U0TtQ0QnqCj1MYikJfNwzwopQ%3D%3D&pageNo=1&numOfRows=100&dataType=XML&CURRENT_DATE=2021121810&HOUR=12&COURSE_ID=1"
+params = {'courseId':'1'}
 
-params = {
-    "Servicekey": api_key_decode,
-    "pageNo": 1,
-    "numOfRows": 10,
-    "COURSE_ID": 1
-    "CURRENT_DATE": 2021121810,
-    "HOUR": 1
+content = requests.get(url, params=params).content
+dict = xmltodict.parse(content)
+jsonString = json.dumps(dict['response']['body'], ensure_ascii=False)
+jsonobj = json.loads(jsonString)
 
-}
-response = requests.get(url, params=params)
+for item in jsonobj['items']['item']:
 
-print(response.text)
+    print(item)
