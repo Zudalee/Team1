@@ -15,7 +15,7 @@ db = client.data_db
 def home():
     return render_template('index.html')
 
-# API 데이터불러오기 테스트
+# API 데이터불러오기 테스트.
 @app.route('/test', methods=['GET'])
 def datatest_get():
    articles = list(db.toursdata.find({}, {'_id': False}))
