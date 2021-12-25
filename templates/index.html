@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="kr">
 <head>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
     <meta charset="UTF-8">
     <title>오늘 어디가지?(가제)</title>
     <<<<<<< HEAD
@@ -30,7 +35,6 @@
 </head>
 
 
-
 <body>
 {#{query코드삽입#}
 <script src="https://code.jquery.com/jquery-3.6.0.js"
@@ -42,52 +46,63 @@
 
 <script type="text/javascript">  //데이터 불러오기 테스트
 
-    $(document).ready(function () {
-        showReview();
-    });
+$(document).ready(function () {
+    showReview();
+});
 
-    function datatest2() {
-        let thema = $('id값').val() //인풋박스의 id값
+function datatest2() {
+    let thema = $('id값').val() //인풋박스의 id값
 
-        $.ajax({
-            type: "POST",
-            url: "/datadb",
-            data: {thema_give: thema },
-            success: function (response) {
-                alert(response["msg"]);
-                window.location.reload();
+    $.ajax({
+        type: "POST",
+        url: "/datadb",
+        data: {thema_give: thema},
+        success: function (response) {
+            alert(response["msg"]);
+            window.location.reload();
+        }
+    })
+}
+
+//버튼 누르면 데이터 불러오는 GET 요청
+function datatest() {
+    let themaKeyWord = $('#thema_id').val();
+
+    alert("성공")
+    console.log()
+
+    $.ajax({
+        type: "GET",
+        url: "/datadb",
+        data: {thema_give: themaKeyWord}, //id로 셀렉트된 val 값 가져오기
+        success: function (response) {
+            alert("연결 확인")
+
+            let datas = response['all_tours']
+
+            for (let i = 0; i < datas.length; i++) {
+                let door = datas[i]['door']
+                let latitude = datas[i]['latitude']
+                let longitude = datas[i]['longitude']
+                let thema = datas[i]['thema']
+                let tourname = datas[i]['tourname']
+
+
+                let temp_html = `<div class="card">
+                                                <img class="card-img-top"
+                                                     src="${door}"
+                                                     alt="Card image cap">
+                                                <div class="card-body">
+                                                    <a target="_blank" href="${latitude}" class="card-title">${tourname}</a>
+                                                    <p class="card-text">${longitude}</p>
+                                                    <p class="card-text comment">${thema}</p>
+                                                </div>
+                                            </div>`
+                $('#cards-box').append(temp_html)
             }
-        })
-    }
-
-    //버튼 누르면 데이터 불러오는 GET 요청
-    function datatest() {
-        let themaKeyWord = $('#thema_id').val();
-
-        alert("성공")
-        console.log()
-
-        $.ajax({
-            type: "GET",
-            url: "/datadb",
-            data: {}, //id로 셀렉트된 val 값 가져오기
-            success: function (response) {
-                alert("연결 확인")
-
-                let datas = response['all_tours']
-
-                for (let i = 0; i < datas.length; i++) {
-                    let door = datas[i]['door']
-                    let latitude = datas[i]['latitude']
-                    let longitude = datas[i]['longitude']
-                    let thema = datas[i]['thema']
-                    let tourname = datas[i]['tourname']
-
-                    console.log(door,latitude,longitude,thema,tourname)
-                }
-            }
-        })
-    }
+        }
+    })
+}
 </script>
 {#/데이터불러오기 테스트#}
 
@@ -99,6 +114,31 @@
         </hi>
     </div>
 </div>
+
+<div id="cards-box" class="card-columns">
+    <div class="card">
+        <img class="card-img-top"
+             src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
+             alt="Card image cap">
+        <div class="card-body">
+            <a target="_blank" href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+            <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+            <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img class="card-img-top"
+             src="https://www.eurail.com/content/dam/images/eurail/Italy%20OCP%20Promo%20Block.adaptive.767.1535627244182.jpg"
+             alt="Card image cap">
+        <div class="card-body">
+            <a target="_blank" href="#" class="card-title">여기 기사 제목이 들어가죠</a>
+            <p class="card-text">기사의 요약 내용이 들어갑니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라만세 무궁화 삼천리 화려강산...</p>
+            <p class="card-text comment">여기에 코멘트가 들어갑니다.</p>
+        </div>
+    </div>
+</div>
+
+
 <div class="search">
     <span class="a1">지역 선택</span>
     <select name="thema_select" id="thema_id" type="text" value=${thema_id}>
@@ -120,45 +160,15 @@
 
     {#    //테스트하기#}
     <form class="data">
-        <button onclick="datatest()" type="button" class="btn btn-primary"> 데이터 불러오는 테스트하기 </button>
+        <button onclick="datatest()" type="button" class="btn btn-primary"> 데이터 불러오는 테스트하기</button>
     </form>
 
 
     {#    여기까지#}
 
 </div>
-<div class="favorite-main">
-    <div class="favorite-div">
-        <hi class="favorite-text">
-            인기 여행지 추천!
-        </hi>
-    </div>
-    <div class="favorite-card1">
-        <div class="favorite-card-title1">
-            경복궁
-        </div>
-    </div>
-    <div class="favorite-card2">
-        <div class="favorite-card-title2">
-            감천 문화마을
-        </div>
-    </div>
-    <div class="favorite-card3">
-        <div class="favorite-card-title3">
-            앞산공원
-        </div>
-    </div>
-    <div class="favorite-card4">
-        <div class="favorite-card-title4">
-            우도
-        </div>
-    </div>
-    <div class="favorite-card5">
-        <div class="favorite-card-title5">
-            송도 센트럴 파크
-        </div>
-    </div>
-</div>
+
+
 =======
 <header>
 

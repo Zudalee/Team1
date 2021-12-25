@@ -17,9 +17,10 @@ def home():
 @app.route('/datadb', methods=['GET'])
 def datatest_get():
 
-   tours = list(db.toursdata.find({}, {'_id': False}))      #collections안의 값 이름 toursdata 안에서 찾아라
+       #collections안의 값 이름 toursdata 안에서 찾아라
    thema_receive = request.args.get('thema_give')
    print(thema_receive)
+   tours = list(db.toursdata.find({'thema' : thema_receive}, {'_id': False}))
    return jsonify({'all_tours': tours})
 
 
