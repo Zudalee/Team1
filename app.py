@@ -6,21 +6,21 @@ from flask import Flask, render_template, jsonify, request
 app = Flask(__name__)
 
 from pymongo import MongoClient
-client = MongoClient('mongodb://test:test@3.34.1.132:27017/')
-# localgost는 대표 ip주소, 컴퓨터 포트27017
-db = client.data_db
-# collection에 연결
+client = MongoClient('mongodb://test:test@3.34.1.132:27017/')  #localgost는 대표 ip주소, 컴퓨터 포트27017
+db = client.data_db  #collections에 연결
 
 @app.route("/")
 def home():
     return render_template('index.html')
 
-# API 데이터불러오기 테스트.
-@app.route('/test', methods=['GET'])
+# DB 데이터 불러오는 API
+@app.route('/datadb', methods=['GET'])
 def datatest_get():
-   articles = list(db.toursdata.find({}, {'_id': False}))
-   print(articles)
-   return jsonify({'articles': articles})
+
+   tours = list(db.toursdata.find({}, {'_id': False}))      #collections안의 값 이름 toursdata 안에서 찾아라
+   thema_receive = request.args.get('thema_give')
+   print(thema_receive)
+   return jsonify({'all_tours': tours})
 
 
 # API POST 테스트

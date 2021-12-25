@@ -32,15 +32,15 @@
 
 
 <body>
-# API 데이터 불러오기
+{#{query코드삽입#}
 <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
         crossorigin="anonymous">
 
 </script>
 
-{#/데이터불러오기 테스트#}
-<script type="text/javascript">
+
+<script type="text/javascript">  //데이터 불러오기 테스트
 
     $(document).ready(function () {
         showReview();
@@ -51,7 +51,7 @@
 
         $.ajax({
             type: "POST",
-            url: "/review",
+            url: "/datadb",
             data: {thema_give: thema },
             success: function (response) {
                 alert(response["msg"]);
@@ -60,15 +60,31 @@
         })
     }
 
-    //데이터 불러오는 GET 요청 url ?
+    //버튼 누르면 데이터 불러오는 GET 요청
     function datatest() {
+        let themaKeyWord = $('#thema_id').val();
+
+        alert("성공")
+        console.log()
+
         $.ajax({
             type: "GET",
-            url: "/review",
-            data: {},
+            url: "/datadb",
+            data: {}, //id로 셀렉트된 val 값 가져오기
             success: function (response) {
-                let datas = response['all_datas']
-                console.log(datas)
+                alert("연결 확인")
+
+                let datas = response['all_tours']
+
+                for (let i = 0; i < datas.length; i++) {
+                    let door = datas[i]['door']
+                    let latitude = datas[i]['latitude']
+                    let longitude = datas[i]['longitude']
+                    let thema = datas[i]['thema']
+                    let tourname = datas[i]['tourname']
+
+                    console.log(door,latitude,longitude,thema,tourname)
+                }
             }
         })
     }
@@ -85,9 +101,15 @@
 </div>
 <div class="search">
     <span class="a1">지역 선택</span>
-    <select name="city" class="select-city">
-        <option value="seoul">서울</option>
-        <option value="busan">부산</option>
+    <select name="thema_select" id="thema_id" type="text" value=${thema_id}>
+
+        <option value="종교/역사/전통">종교/역사/전통</option>
+        <option value="체험/학습/산업">체험/학습/산업</option>
+        <option value="자연/힐링">자연/힐링</option>
+        <option value="문화/예술">문화/예술</option>
+        <option value="쇼핑/놀이">쇼핑/놀이</option>
+        <option value="캠핑/스포츠">캠핑/스포츠</option>
+
     </select>
     <span class="a2">검색하기</span>
     <form class="searchbox">
