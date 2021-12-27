@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 from pymongo import MongoClient
 client = MongoClient('mongodb://test:test@3.34.1.132:27017/')  #localgost는 대표 ip주소, 컴퓨터 포트27017
-db = client.data_db  #collections에 연결
+db = client.data_db  #DB에 연결
 
 @app.route("/")
 def home():
@@ -15,13 +15,12 @@ def home():
 
 # DB 데이터 불러오는 API
 @app.route('/datadb', methods=['GET'])
-def datatest_get():
+def datatest():
 
-       #collections안의 값 이름 toursdata 안에서 찾아라
-   thema_receive = request.args.get('thema_give')
+   thema_receive = request.args.get('thema_give') #thema_give를 요청하면 thema_receive로 받음
    print(thema_receive)
-   tours = list(db.toursdata.find({'thema' : thema_receive}, {'_id': False}))
-   return jsonify({'all_tours': tours})
+   tours = list(db.toursdata.find({'thema' : thema_receive}, {'_id': False})) #DB안에서 thema 값이 thema_receive인 데이터를 찾음
+   return jsonify({'all_tours': tours}) #return한 값을 all_tours에 저장
 
 
 # API POST 테스트
