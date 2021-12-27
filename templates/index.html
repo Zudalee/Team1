@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기분이 최고조</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js"></script>
+
+
+    <link rel="stylesheet" href="/static/css/style.css?after">
+
+    <!-- script -->
+    <script src="/static/js/script.js"></script>
+
+    <!-- slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+
+
+<body>
+
+<script type="text/javascript">  //데이터 불러오기 테스트
+
+
+//버튼 누르면 데이터 불러오는 GET 요청
+function datatest() {
+    let themaKeyWord = $('#thema_id').val();   //thema_id의 value 값을 불러옴
+
+    alert("성공")
+    console.log()
+
+    $.ajax({
+        type: "GET",
+        url: "/datadb",
+        data: {thema_give: themaKeyWord}, //id로 셀렉트된 val 값을 thema_give로 요청
+        success: function (response) {
+            alert("연결 확인")
+
+            let datas = response['all_tours'] //reponse 값을 datas로 정의
+
+            for (let i = 0; i < datas.length; i++) {
+                let door = datas[i]['door']
+                let latitude = datas[i]['latitude']
+                let longitude = datas[i]['longitude']
+                let thema = datas[i]['thema']
+                let tourname = datas[i]['tourname']
+
+
+                let temp_html = `
+                                                <li>
+                                                <p target="_blank" href="${door}" class="card-title">${tourname}</p>
+                                                <br>
+                                                <p class="card-text">${thema}</p>
+                                                <img onclick="a1()" src="/static/image/mapicon.png" style="cursor:pointer" class="map_icon">
+                                                </li>
+                                            `
+                $('#cards-box').append(temp_html)   //cards-box에 카드 붙여넣기
+            }
+        }
+    })
+}
+</script>
+
+
+<div class="wrap">
+    <header>
+        <nav>
+            <ul>
+                <li class="blind"><img src="" alt="오늘 어디가지? 메인 이미지 넣기"> 오늘 어디가지?</li>
+            </ul>
+        </nav>
+        <div class="m2">
+            <p class="comment">the trable is not about goging to see new soenery,</p>
+            <p class="comment">It is to gain another eye to see the world.</p>
+        </div>
+    </header>
+    <main>
+        <!-- 첫번째 색션 -->
+        <section class="slides-bg">
+            <h2 class="blind">jeju</h2>
+            <div class="slides">
+                <div class="slides-sub">
+                    <img src="/static/image/jeju.jpg" alt="제주 이미지">
+                    <h3>제주도의 경치를 느껴보세요&#33;</h3>
+                    <p>지긋지긋한 방구석 탈출&#33; 여기가 바로 내가 원하던 그 여행지&#33;</p>
+                </div>
+                <div class="slides-bg">
+                    <img src="/static/image/tongyeong.jpg" alt="통영 이미지">
+                    <h3>통영의 경치를 느껴보세요&#33;</h3>
+                    <p>지긋지긋한 방구석 탈출&#33; 여기가 바로 내가 원하던 그 여행지&#33;</p>
+                </div>
+                <div class="slides-bg">
+                    <img src="/static/image/yangsan.jpg" alt="제주 이미지">
+                    <h3>양산의 경치를 느껴보세요&#33;</h3>
+                    <p>지긋지긋한 방구석 탈출&#33; 여기가 바로 내가 원하던 그 여행지&#33;</p>
+                </div>
+            </div>
+            <article>
+                <div class="theme-bg">
+                    <div class="theme-content">
+                        <select id="thema_id" name="theme-list" type="text" value=${thema_id}>
+                            <option value="종교/역사/전통">종교/역사/전통</option>
+                            <option value="체험/학습/산업">체험/학습/산업</option>
+                            <option value="자연/힐링">자연/힐링</option>
+                            <option value="문화/예술">문화/예술</option>
+                            <option value="캠핑/스포츠">캠핑/스포츠</option>
+                            <option value="쇼핑/놀이">쇼핑/놀이</option>
+                        </select>
+                        <button onclick="datatest()" class="button">검색</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- 카드리스트 -->
+        <section class="card-list">
+            <!--<div id="cards-box" class="card-columns">-->
+            <ul id="cards-box" class="card-columns">
+            </ul>
+            </div>
+
+        </section>
+        <!-- 테마추천 -->
+        <article classs="recommend">
+            <h2 class="theme-recommend">&#35;테마추천</h2>
+            <div class="theme-icon">
+                <img class="icon" src="/static/image/icon1.png" alt="종교/역사/전통"/>
+                <img class="icon" src="/static/image/icon2.png" alt="체험/학습/산업"/>
+                <img class="icon" src="/static/image/icon3.png" alt="자연/힐링"/>
+                <img class="icon" src="/static/image/icon1.png" alt="문화/예술"/>
+                <img class="icon" src="/static/image/icon2.png" alt="캠핑/스포츠"/>
+                <img class="icon" src="/static/image/icon3.png" alt="쇼핑/놀이"/>
+            </div>
+        </article>
+        </section>
+        <!-- 세번째 색션 -->
+        <setion class="s3">
+            <article class="bt-slide">
+                <h2>&#35;여행콕콕</h2>
+            </article>
+            <article class="bts">
+                <div class="slide02">
+                    <div><img class="bt-slide-img" src="/static/image/buseoksa.jpg" alt="부석사"/></div>
+                    <div><img class="bt-slide-img" src="/static/image/changyeong.jpg" alt="창녕"/></div>
+                    <div><img class="bt-slide-img" src="/static/image/Gyeongbokgung.jpg" alt="경복궁"/></div>
+                    <div><img class="bt-slide-img" src="/static/image/maehwa.jpg" alt="매화마을"/></div>
+                    <div><img class="bt-slide-img" src="/static/image/ssw.jpg" alt="담양소쇄원"/></div>
+                    <div><img class="bt-slide-img" src="/static/image/pc.jpg" alt="포천"/></div>
+                </div>
+            </article>
+        </setion>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3 class="footer-title">기분최고조</h3>
+            <h4>SPRTA CODING CLUB</h4>
+            <p>이희주 - 박정인 - 박상현 - 한수지 - 김호성</p>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>

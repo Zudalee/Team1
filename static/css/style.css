@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+/* 폰트어썸 */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/* 구글폰트 */
+/* NanoSans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* Reset CSS */
+@import url("normalize.css");
+@import url("reset.css");
+
+/* Slcik CSS */
+@import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
+
+/* Xeicon */
+@import url("https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css");
+
+/* Common CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.blind {
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+}
+
+form * {
+  color: inherit;
+  font: inherit;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Default CSS */
+html {
+  font-size: 13px;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #555;
+  font-weight: 300;
+  line-height: 1.7;
+  /* background:#fffafa  */
+}
+
+/* header */
+header {
+  width: 1200px;
+  margin: 20px auto 0;
+}
+
+header ul {
+  background: url(/static/image/logo.png) no-repeat;
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+
+/* slide */
+main {
+  /* background: #f3ebebc0; */
+  width: 1920px;
+  margin: auto;
+}
+
+.slides {
+  width: 1920px;
+  height: 900px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slick-slider button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translate(-50%);
+  width: 71px;
+  height: 71px;
+  border-radius: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+
+.slick-arrow::before {
+  font-family: 'xeicon';
+  color: #fff;
+  font-size: 40px;
+}
+
+img {
+  width: 1920px;
+  height: 800px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.slick-prev {
+  left: 150px;
+  font-size: 0;
+  color: transparent;
+}
+
+.slick-prev::before {
+  content: "\e93d";
+}
+
+.slick-next {
+  right: 100px;
+  font-size: 0;
+  color: transparent;
+}
+
+.slick-next::before {
+  content: "\e940";
+}
+
+.slick-slide h3 {
+  display: block;
+  font-size: 50px;
+  font-weight: 500;
+  position: absolute;
+  top: 370px;
+  margin-left: 400px;
+  color: #fff;
+}
+
+.slick-slide p {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 450px;
+  margin-left: 400px;
+  color: #fff;
+}
+
+.slides-bg {
+  position: relative;
+}
+
+/* 드롭박스 */
+.theme-bg {
+  position: absolute;
+  width: 650px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  height: 160px;
+  top: 600px;
+  left: 600px;
+}
+
+.theme-content {
+  position: absolute;
+  top: 20px;
+}
+
+.theme-content label {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  width: 100px;
+  left: 270px;
+}
+
+.theme-content select {
+  width: 350px;
+  height: 40px;
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  padding-left: 20px;
+}
+
+.button {
+  position: absolute;
+  top: 60px;
+  right: -560px;
+  width: 80px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+.card-list{
+  width: 1700px;
+  margin: 0 auto;
+}
+.card{
+  clear: both;
+}
+
+.card-columns li {
+  border-radius: 10px;
+  border: 1px solid #000;
+  width: 350px;
+  height: 80px;
+  float: left;
+  margin: 5px 10px;
+  background: #f8ea6a;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.card-columns p {
+  float: left;
+}
+
+.map_icon {
+ float: right;
+
+}
+
+
+
+.map_icon {
+  width: 44px;
+  height: 41px;
+}
+
+/* 하단 */
+.recommend {
+  width: 1500px;
+}
+
+.m2 {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+.comment {
+  font-size: 18px;
+  text-align: right;
+  font-weight: bold;
+  font-style: italic;
+  width: 500px;
+  margin: auto;
+}
+
+.theme-recommend {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  width: 200px;
+  height: 50px;
+  margin: 100px auto 0;
+  background: #fabcbc;
+  clear: both;
+}
+
+.theme-icon {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.icon {
+  width: 200px;
+  height: 200px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+}
+
+.bt-slide {
+  width: 150px;
+  background: #fabcbc;
+  margin-left: 170px;
+  margin-bottom: 20px;
+  margin-left: 300px
+}
+
+.bt-slide h2 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bts {
+  margin-bottom: 100px;
+}
+
+.slide02 {
+  background: #e2e2ddc5;
+  height: 400px;
+}
+
+.bt-slide-img {
+  width: 500px;
+  height: 250px;
+  margin-top: 75px;
+}
+
+
+
+/* footer */
+.footer {
+  background-color: #e2e2e2;
+  color: #606060;
+  padding: 20px 0 20px;
+  height: 150px;
+}
+
+.footer-content {
+  width: 1200px;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.footer-content .footer-title,
+.footer-content h4 {
+  display: inline-block;
+}
+
+.footer-content .footer-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-content h4,
+.footer-content p {
+  font-size: 12px;
+}
