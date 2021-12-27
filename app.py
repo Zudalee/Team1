@@ -1,5 +1,6 @@
 # coding = utf-8
 
+<<<<<<< HEAD
 from pymongo import MongoClient
 from flask import Flask, render_template, jsonify, request
 
@@ -43,3 +44,17 @@ if __name__ == "__main__":
 
 
 
+=======
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return render_template('04.html')
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
+>>>>>>> 35b2c3f84c64c546c51bdd71d4ac009f93015235
